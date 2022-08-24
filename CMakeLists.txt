@@ -8,3 +8,8 @@ file(GLOB SOURCES "src/*.c")
 add_executable(finetd ${SOURCES})
 
 install(TARGETS finetd DESTINATION /usr/local/bin)
+
+
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "KK") #required
+INCLUDE(CPack)
